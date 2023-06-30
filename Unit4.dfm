@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 371
-  Top = 149
+  Left = 215
+  Top = 206
   Width = 928
   Height = 480
   Caption = 'Form4'
@@ -23,37 +23,37 @@ object Form4: TForm4
   object Label2: TLabel
     Left = 64
     Top = 40
-    Width = 27
+    Width = 38
     Height = 13
-    Caption = 'Siswa'
+    Caption = 'Siswa id'
   end
   object Label3: TLabel
     Left = 64
     Top = 64
-    Width = 20
+    Width = 31
     Height = 13
-    Caption = 'Poin'
+    Caption = 'Poin id'
   end
   object Label4: TLabel
     Left = 64
     Top = 88
-    Width = 20
+    Width = 31
     Height = 13
-    Caption = 'Wali'
+    Caption = 'Wali id'
   end
   object Label5: TLabel
     Left = 64
     Top = 112
-    Width = 20
+    Width = 31
     Height = 13
-    Caption = 'ortu'
+    Caption = 'ortu id'
   end
   object Label6: TLabel
     Left = 64
     Top = 136
-    Width = 25
+    Width = 36
     Height = 13
-    Caption = 'Kelas'
+    Caption = 'Kelas id'
   end
   object Label7: TLabel
     Left = 64
@@ -219,7 +219,6 @@ object Form4: TForm4
   end
   object zqry1: TZQuery
     Connection = ZConnection1
-    Active = True
     SQL.Strings = (
       'select  *  from tb_riwayat_poin')
     Params = <>

@@ -1,6 +1,6 @@
 object Form1: TForm1
   Left = 244
-  Top = 147
+  Top = 103
   Width = 886
   Height = 631
   Caption = 'Input Data Siswa'

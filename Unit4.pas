@@ -68,22 +68,22 @@ end;
 procedure TForm4.Button2Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_riwayat_poin set id ="'+e1.Text+'", siswa="'+e2.Text+'", poin_id="'+e3.Text+'", wali_id="'+e4.Text+'", ortu_id="'+e5.Text+'", kelas_id="'+e.6.Text+'", tanggal="'+e7.Text+'", semester="'+c1.Text+'",lulus="'e.8.Text+'" where id ="'+id+'"');
+  zqry1.SQL.Add('update tb_riwayat_poin set id ="'+e1.Text+'", siswa_id="'+e2.Text+'", poin_id="'+e3.Text+'", wali_id="'+e4.Text+'",ortu_id="'+e5.Text+'", kelas_id="'+e6.Text+'", tanggal="'+e7.Text='",semester="'+c1.Text+'" ,lulus="'+e6.Text+'" where id ="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_riwayat_poin');
+  zqry1.SQL.Add('select * from tb_siswa');
   zqry1.Open;
   Showmessage('DATA BERHASIL DI EDIT');
 end;
 
 procedure TForm4.Button3Click(Sender: TObject);
 begin
- zqry1.SQL.Clear;
-  zqry1.SQL.Add('delete from tb_riwayat_poin where id="'+id+'"');
+zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from tb_riwayat_poin where id ="'+id+'"');
   zqry1.ExecSQL;
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_riwayat_point');
+  zqry1.SQL.Add('select * from tb_riwayat_poin');
   zqry1.Open;
   ShowMessage('DATA BERHASIL DIHAPUS!');
 end;
@@ -95,8 +95,8 @@ begin
   e3.Clear;
   e4.Clear;
   e5.Clear;
-  c6.Clear;
-  c7.Clear;
+  e6.Clear;
+  e7.Clear;
   c1.Clear;
   e8.Clear;
 end;
