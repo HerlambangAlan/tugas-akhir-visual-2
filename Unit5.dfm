@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 187
-  Top = 202
+  Left = 202
+  Top = 155
   Width = 928
   Height = 480
   Caption = 'Form5'
@@ -84,17 +84,10 @@ object Form5: TForm5
   end
   object e4: TEdit
     Left = 200
-    Top = 88
-    Width = 121
-    Height = 21
-    TabOrder = 4
-  end
-  object e5: TEdit
-    Left = 200
     Top = 112
     Width = 121
     Height = 21
-    TabOrder = 5
+    TabOrder = 4
   end
   object Button1: TButton
     Left = 72
@@ -102,7 +95,8 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Simpan'
-    TabOrder = 6
+    TabOrder = 5
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 184
@@ -110,7 +104,8 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Edit'
-    TabOrder = 7
+    TabOrder = 6
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 296
@@ -118,7 +113,8 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Hapus'
-    TabOrder = 8
+    TabOrder = 7
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 400
@@ -126,7 +122,8 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Clear Form'
-    TabOrder = 9
+    TabOrder = 8
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 496
@@ -134,7 +131,18 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Print'
+    TabOrder = 9
+  end
+  object c1: TComboBox
+    Left = 200
+    Top = 88
+    Width = 145
+    Height = 21
+    ItemHeight = 13
     TabOrder = 10
+    Items.Strings = (
+      'Pelanggaran'
+      'Prestasi')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -152,7 +160,6 @@ object Form5: TForm5
   end
   object zqry1: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
       'select * from tb_poin')
     Params = <>

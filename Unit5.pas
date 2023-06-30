@@ -22,12 +22,16 @@ type
     e2: TEdit;
     e3: TEdit;
     e4: TEdit;
-    e5: TEdit;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
+    c1: TComboBox;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,5 +44,49 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm5.Button1Click(Sender: TObject);
+begin
+zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into tb_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+c1.Text+'", "'+e4.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_poin');
+  zqry1.Open;
+  Showmessage('DATA BERHASIL DI SIMPAN');
+end;
+
+procedure TForm5.Button2Click(Sender: TObject);
+begin
+ zqry1.SQL.Clear;
+  zqry1.SQL.Add('update tb_poin set id="'+e1.Text+'", nama="'+e2.Text+'", bobot="'+e3.Text+'", jenis="'+c1.Text+'", status="'+e5.Text+'" where id="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_siswa');
+  zqry1.Open;
+  Showmessage('DATA BERHASIL DI EDIT');
+end;
+
+procedure TForm5.Button3Click(Sender: TObject);
+begin
+ zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from tb_poin where id="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_poin');
+  zqry1.Open;
+  ShowMessage('DATA BERHASIL DIHAPUS!');
+end;
+
+procedure TForm5.Button4Click(Sender: TObject);
+begin
+  e1.Clear;
+  e2.Clear;
+  e3.Clear;
+  c1.Clear;
+  e4.Clear;
+end;
 
 end.

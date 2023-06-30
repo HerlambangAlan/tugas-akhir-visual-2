@@ -112,8 +112,8 @@ object Form1: TForm1
     Caption = 'Tanggal Lahir'
   end
   object b3: TButton
-    Left = 248
-    Top = 24
+    Left = 80
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Simpan'
@@ -121,8 +121,8 @@ object Form1: TForm1
     OnClick = b3Click
   end
   object b4: TButton
-    Left = 336
-    Top = 24
+    Left = 176
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Edit'
@@ -130,8 +130,8 @@ object Form1: TForm1
     OnClick = b4Click
   end
   object b5: TButton
-    Left = 424
-    Top = 24
+    Left = 280
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Hapus'
@@ -139,8 +139,8 @@ object Form1: TForm1
     OnClick = b5Click
   end
   object b6: TButton
-    Left = 512
-    Top = 24
+    Left = 376
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Clear Form'
@@ -148,8 +148,8 @@ object Form1: TForm1
     OnClick = b6Click
   end
   object b2: TButton
-    Left = 600
-    Top = 24
+    Left = 472
+    Top = 312
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -212,10 +212,10 @@ object Form1: TForm1
     TabOrder = 12
   end
   object dg1: TDBGrid
-    Left = 24
-    Top = 296
+    Left = 8
+    Top = 408
     Width = 1201
-    Height = 225
+    Height = 145
     DataSource = d1
     TabOrder = 13
     TitleFont.Charset = DEFAULT_CHARSET
@@ -411,8 +411,8 @@ object Form1: TForm1
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Users\ASUS\Documents\visual 2\Project-akhir\libmysql.dll'
-    Left = 32
-    Top = 8
+    Left = 720
+    Top = 40
   end
   object zqry1: TZQuery
     Connection = con1
@@ -420,12 +420,12 @@ object Form1: TForm1
     SQL.Strings = (
       'select * from tb_siswa')
     Params = <>
-    Left = 80
-    Top = 8
+    Left = 760
+    Top = 40
   end
   object d1: TDataSource
     DataSet = zqry1
-    Left = 128
-    Top = 8
+    Left = 800
+    Top = 40
   end
 end
