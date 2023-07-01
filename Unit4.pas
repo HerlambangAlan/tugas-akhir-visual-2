@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids;
+  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids, ComCtrls;
 
 type
   TForm4 = class(TForm)
@@ -29,13 +29,13 @@ type
     e5: TEdit;
     e6: TEdit;
     e7: TEdit;
-    e8: TEdit;
     c1: TComboBox;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
+    dtp1: TDateTimePicker;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -56,7 +56,7 @@ implementation
 procedure TForm4.Button1Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('insert into tb_riwayat_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text'", "'+e6.Text+'", "'+e7.Text+'", "'+c1.Text+'", "'+e8.Text+'")');
+  zqry1.SQL.Add('insert into tb_riwayat_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text'", "'+e6.Text'", "'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'", "'+c1.Text+'", "'+e7.Text+'")');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;

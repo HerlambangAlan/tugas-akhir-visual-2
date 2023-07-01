@@ -33,6 +33,10 @@ object Form3: TForm3
       end
       object InputDataPoij1: TMenuItem
         Caption = 'Input Data Poin'
+        OnClick = InputDataPoij1Click
+      end
+      object InputDataWaliKelas1: TMenuItem
+        Caption = 'Input Data Ortu'
       end
     end
   end

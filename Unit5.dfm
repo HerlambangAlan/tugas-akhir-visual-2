@@ -1,6 +1,6 @@
 object Form5: TForm5
   Left = 202
-  Top = 155
+  Top = 111
   Width = 928
   Height = 480
   Caption = 'Form5'
@@ -160,6 +160,7 @@ object Form5: TForm5
   end
   object zqry1: TZQuery
     Connection = con1
+    Active = True
     SQL.Strings = (
       'select * from tb_poin')
     Params = <>

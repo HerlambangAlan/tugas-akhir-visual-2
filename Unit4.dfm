@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 213
-  Top = 154
+  Left = 237
+  Top = 169
   Width = 928
   Height = 480
   Caption = 'Form4'
@@ -133,17 +133,10 @@ object Form4: TForm4
   end
   object e7: TEdit
     Left = 216
-    Top = 160
-    Width = 121
-    Height = 21
-    TabOrder = 7
-  end
-  object e8: TEdit
-    Left = 216
     Top = 208
     Width = 121
     Height = 21
-    TabOrder = 8
+    TabOrder = 7
   end
   object c1: TComboBox
     Left = 216
@@ -151,7 +144,7 @@ object Form4: TForm4
     Width = 145
     Height = 21
     ItemHeight = 13
-    TabOrder = 9
+    TabOrder = 8
     Items.Strings = (
       '1'
       '2'
@@ -165,7 +158,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'Simpan'
-    TabOrder = 10
+    TabOrder = 9
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -174,7 +167,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'Edit'
-    TabOrder = 11
+    TabOrder = 10
     OnClick = Button2Click
   end
   object Button3: TButton
@@ -183,7 +176,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'Hapus'
-    TabOrder = 12
+    TabOrder = 11
     OnClick = Button3Click
   end
   object Button4: TButton
@@ -192,7 +185,7 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'Clear Form'
-    TabOrder = 13
+    TabOrder = 12
     OnClick = Button4Click
   end
   object Button5: TButton
@@ -201,6 +194,15 @@ object Form4: TForm4
     Width = 75
     Height = 25
     Caption = 'Print'
+    TabOrder = 13
+  end
+  object dtp1: TDateTimePicker
+    Left = 216
+    Top = 160
+    Width = 186
+    Height = 21
+    Date = 45108.849277430560000000
+    Time = 45108.849277430560000000
     TabOrder = 14
   end
   object ZConnection1: TZConnection
@@ -219,6 +221,7 @@ object Form4: TForm4
   end
   object zqry1: TZQuery
     Connection = ZConnection1
+    Active = True
     SQL.Strings = (
       'select  *  from tb_riwayat_poin')
     Params = <>

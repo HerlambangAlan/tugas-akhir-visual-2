@@ -14,9 +14,11 @@ type
     InputDataKelas1: TMenuItem;
     i1: TMenuItem;
     InputDataPoij1: TMenuItem;
+    InputDataWaliKelas1: TMenuItem;
     procedure InputDataSiswa1Click(Sender: TObject);
     procedure InputDataKelas1Click(Sender: TObject);
     procedure i1Click(Sender: TObject);
+    procedure InputDataPoij1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,6 +53,13 @@ begin
   if Form4=nil then
   Form4:=TForm4.Create(Application);
   Form4.Show;
+end;
+
+procedure TForm3.InputDataPoij1Click(Sender: TObject);
+begin
+if Form5=nil then
+  Form5:=TForm5.Create(Application);
+  Form5.Show;
 end;
 
 end.

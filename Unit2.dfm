@@ -42,8 +42,8 @@ object Form2: TForm2
     TabOrder = 0
   end
   object b1: TButton
-    Left = 16
-    Top = 8
+    Left = 80
+    Top = 216
     Width = 75
     Height = 25
     Caption = 'Simpan'
@@ -51,9 +51,9 @@ object Form2: TForm2
     OnClick = b1Click
   end
   object dg1: TDBGrid
-    Left = 16
-    Top = 152
-    Width = 320
+    Left = 168
+    Top = 296
+    Width = 353
     Height = 120
     DataSource = d1
     TabOrder = 2
@@ -98,8 +98,8 @@ object Form2: TForm2
       end>
   end
   object b2: TButton
-    Left = 104
-    Top = 8
+    Left = 160
+    Top = 216
     Width = 75
     Height = 25
     Caption = 'Edit'
@@ -107,8 +107,8 @@ object Form2: TForm2
     OnClick = b2Click
   end
   object b3: TButton
-    Left = 192
-    Top = 8
+    Left = 240
+    Top = 216
     Width = 75
     Height = 25
     Caption = 'Hapus'
@@ -116,8 +116,8 @@ object Form2: TForm2
     OnClick = b3Click
   end
   object b4: TButton
-    Left = 280
-    Top = 8
+    Left = 320
+    Top = 216
     Width = 75
     Height = 25
     Caption = 'Clear Form'
@@ -125,8 +125,8 @@ object Form2: TForm2
     OnClick = b4Click
   end
   object b5: TButton
-    Left = 368
-    Top = 8
+    Left = 408
+    Top = 216
     Width = 75
     Height = 25
     Caption = 'Print'
