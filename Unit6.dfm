@@ -3,7 +3,7 @@ object Form6: TForm6
   Top = 171
   Width = 928
   Height = 480
-  Caption = 'Form6'
+  Caption = 'Data Ortu'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,72 +13,65 @@ object Form6: TForm6
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 40
-    Top = 8
-    Width = 35
-    Height = 13
-    Caption = 'Ortu Id'
-  end
   object Label2: TLabel
     Left = 40
-    Top = 40
+    Top = 24
     Width = 14
     Height = 13
     Caption = 'Nik'
   end
   object Label3: TLabel
     Left = 40
-    Top = 72
+    Top = 56
     Width = 27
     Height = 13
     Caption = 'Nama'
   end
   object Label4: TLabel
     Left = 40
-    Top = 104
+    Top = 88
     Width = 51
     Height = 13
     Caption = 'Pendidikan'
   end
   object Label5: TLabel
     Left = 40
-    Top = 136
+    Top = 112
     Width = 48
     Height = 13
     Caption = 'Pekerjaan'
   end
   object Label6: TLabel
-    Left = 368
-    Top = 8
+    Left = 48
+    Top = 136
     Width = 20
     Height = 13
     Caption = 'Telp'
   end
   object Label7: TLabel
     Left = 368
-    Top = 40
+    Top = 24
     Width = 33
     Height = 13
     Caption = 'Alamat'
   end
   object Label8: TLabel
     Left = 368
-    Top = 72
+    Top = 56
     Width = 33
     Height = 13
     Caption = 'Agama'
   end
   object Label9: TLabel
-    Left = 368
-    Top = 104
+    Left = 360
+    Top = 88
     Width = 63
     Height = 13
     Caption = 'Jenis Kelamin'
   end
   object Label10: TLabel
     Left = 368
-    Top = 136
+    Top = 120
     Width = 31
     Height = 13
     Caption = 'Status'
@@ -130,7 +123,7 @@ object Form6: TForm6
     Height = 25
     Caption = 'Clear from'
     TabOrder = 4
-    OnClick = Button4Click
+    OnClick = clClick
   end
   object Button5: TButton
     Left = 408
@@ -142,21 +135,21 @@ object Form6: TForm6
   end
   object e1: TEdit
     Left = 112
-    Top = 8
+    Top = 16
     Width = 153
     Height = 21
     TabOrder = 6
   end
   object e2: TEdit
     Left = 112
-    Top = 40
+    Top = 48
     Width = 153
     Height = 21
     TabOrder = 7
   end
   object e3: TEdit
     Left = 112
-    Top = 72
+    Top = 112
     Width = 153
     Height = 21
     TabOrder = 8
@@ -164,38 +157,31 @@ object Form6: TForm6
   object e4: TEdit
     Left = 112
     Top = 136
-    Width = 153
+    Width = 121
     Height = 21
     TabOrder = 9
   end
   object e5: TEdit
-    Left = 440
-    Top = 8
+    Left = 448
+    Top = 16
     Width = 121
     Height = 21
     TabOrder = 10
   end
   object e6: TEdit
     Left = 448
-    Top = 40
+    Top = 48
     Width = 121
     Height = 21
     TabOrder = 11
   end
-  object e7: TEdit
-    Left = 448
-    Top = 72
-    Width = 121
-    Height = 21
-    TabOrder = 12
-  end
   object c1: TComboBox
     Left = 112
-    Top = 104
+    Top = 80
     Width = 145
     Height = 21
     ItemHeight = 13
-    TabOrder = 13
+    TabOrder = 12
     Items.Strings = (
       'SD'
       'SMP'
@@ -204,19 +190,19 @@ object Form6: TForm6
   end
   object c2: TComboBox
     Left = 448
-    Top = 104
+    Top = 80
+    Width = 145
+    Height = 21
+    ItemHeight = 13
+    TabOrder = 13
+  end
+  object c3: TComboBox
+    Left = 448
+    Top = 112
     Width = 145
     Height = 21
     ItemHeight = 13
     TabOrder = 14
-  end
-  object c3: TComboBox
-    Left = 456
-    Top = 136
-    Width = 145
-    Height = 21
-    ItemHeight = 13
-    TabOrder = 15
     Items.Strings = (
       'Kandung'
       'Wali')

@@ -13,7 +13,6 @@ type
     zqry1: TZQuery;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
-    Id: TLabel;
     Nama: TLabel;
     Bobot: TLabel;
     Jenis: TLabel;
@@ -21,7 +20,6 @@ type
     e1: TEdit;
     e2: TEdit;
     e3: TEdit;
-    e4: TEdit;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
@@ -48,7 +46,7 @@ implementation
 procedure TForm5.Button1Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('insert into tb_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+c1.Text+'", "'+e4.Text+'")');
+  zqry1.SQL.Add('insert into tb_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+c1.Text+'", "'+e3.Text+'")');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -60,7 +58,7 @@ end;
 procedure TForm5.Button2Click(Sender: TObject);
 begin
  zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_poin set id="'+e1.Text+'", nama="'+e2.Text+'", bobot="'+e3.Text+'", jenis="'+c1.Text+'", status="'+e5.Text+'" where id="'+id+'"');
+  zqry1.SQL.Add('update tb_poin set nama="'+e1.Text+'", bobot="'+e2.Text+'", jenis="'+c1.Text+'", status="'+e3.Text+'" where id="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -84,7 +82,6 @@ procedure TForm5.Button4Click(Sender: TObject);
 begin
   e1.Clear;
   e2.Clear;
-  e3.Clear;
   c1.Clear;
   e4.Clear;
 end;

@@ -13,7 +13,6 @@ type
     zqry1: TZQuery;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -28,7 +27,6 @@ type
     e4: TEdit;
     e5: TEdit;
     e6: TEdit;
-    e7: TEdit;
     c1: TComboBox;
     Button1: TButton;
     Button2: TButton;
@@ -56,7 +54,7 @@ implementation
 procedure TForm4.Button1Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('insert into tb_riwayat_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+e6.Text+'", "'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'", "'+c1.Text+'", "'+e7.Text+'")');
+  zqry1.SQL.Add('insert into tb_riwayat_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'", "'+c1.Text+'", "'+e6.Text+'")');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -68,7 +66,7 @@ end;
 procedure TForm4.Button2Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_riwayat_poin set id ="'+e1.Text+'", siswa_id="'+e2.Text+'", poin_id="'+e3.Text+'", wali_id="'+e4.Text+'", ortu_id="'+e5.Text+'", kelas_id="'+e6.Text+'", semester="'+c1.Text+'" ,status="'+e6.Text+'" where id ="'+id+'"');
+  zqry1.SQL.Add('update tb_riwayat_poin set siswa_id ="'+e1.Text+'", poin_id="'+e2.Text+'", wali_id="'+e3.Text+'", ortu_id="'+e4.Text+'", kelas_id="'+e5.Text+'", status="'+e6.Text+'" where id="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -95,10 +93,8 @@ begin
   e3.Clear;
   e4.Clear;
   e5.Clear;
-  e6.Clear;
-  e7.Clear;
   c1.Clear;
-  e8.Clear;
+  e6.Clear;
 end;
 
 end.

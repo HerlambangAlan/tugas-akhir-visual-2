@@ -1,9 +1,9 @@
 object Form5: TForm5
-  Left = 202
-  Top = 155
+  Left = 193
+  Top = 172
   Width = 928
   Height = 480
-  Caption = 'Form5'
+  Caption = 'Data Poin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,13 +13,6 @@ object Form5: TForm5
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Id: TLabel
-    Left = 48
-    Top = 24
-    Width = 10
-    Height = 13
-    Caption = 'Id'
-  end
   object Nama: TLabel
     Left = 48
     Top = 48
@@ -63,31 +56,24 @@ object Form5: TForm5
   end
   object e1: TEdit
     Left = 200
-    Top = 16
+    Top = 40
     Width = 121
     Height = 21
     TabOrder = 1
   end
   object e2: TEdit
     Left = 200
-    Top = 40
+    Top = 64
     Width = 121
     Height = 21
     TabOrder = 2
   end
   object e3: TEdit
     Left = 200
-    Top = 64
-    Width = 121
-    Height = 21
-    TabOrder = 3
-  end
-  object e4: TEdit
-    Left = 200
     Top = 112
     Width = 121
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object Button1: TButton
     Left = 72
@@ -95,7 +81,7 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Simpan'
-    TabOrder = 5
+    TabOrder = 4
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -104,7 +90,7 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Edit'
-    TabOrder = 6
+    TabOrder = 5
     OnClick = Button2Click
   end
   object Button3: TButton
@@ -113,7 +99,7 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Hapus'
-    TabOrder = 7
+    TabOrder = 6
     OnClick = Button3Click
   end
   object Button4: TButton
@@ -122,7 +108,7 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Clear Form'
-    TabOrder = 8
+    TabOrder = 7
     OnClick = Button4Click
   end
   object Button5: TButton
@@ -131,7 +117,7 @@ object Form5: TForm5
     Width = 75
     Height = 25
     Caption = 'Print'
-    TabOrder = 9
+    TabOrder = 8
   end
   object c1: TComboBox
     Left = 200
@@ -139,7 +125,7 @@ object Form5: TForm5
     Width = 145
     Height = 21
     ItemHeight = 13
-    TabOrder = 10
+    TabOrder = 9
     Items.Strings = (
       'Pelanggaran'
       'Prestasi')

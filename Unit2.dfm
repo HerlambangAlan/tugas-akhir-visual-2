@@ -1,6 +1,6 @@
 object Form2: TForm2
   Left = 279
-  Top = 166
+  Top = 122
   Width = 928
   Height = 480
   Caption = 'Input Data Kelas'
@@ -171,7 +171,6 @@ object Form2: TForm2
   end
   object zqry1: TZQuery
     Connection = con2
-    Active = True
     SQL.Strings = (
       'select * from tb_kelas')
     Params = <>

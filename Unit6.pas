@@ -13,7 +13,6 @@ type
     DataSource1: TDataSource;
     zqry1: TZQuery;
     DBGrid1: TDBGrid;
-    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -26,7 +25,6 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
-    Button4: TButton;
     Button5: TButton;
     e1: TEdit;
     e2: TEdit;
@@ -34,14 +32,14 @@ type
     e4: TEdit;
     e5: TEdit;
     e6: TEdit;
-    e7: TEdit;
     c1: TComboBox;
     c2: TComboBox;
     c3: TComboBox;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure clClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,11 +56,11 @@ implementation
 procedure TForm6.Button1Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('insert into tb_ortu values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+c1.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+e6.Text+'", "'+e7.Text+'", "'+e6.Text+'", "'+e7.Text+'", "'+c2.Text+'", "'+c3.Text+'")');
+  zqry1.SQL.Add('insert into tb_ortu values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+c1.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+e6.Text+'", "'+c2.Text+'", "'+c3.Text+'")');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_siswa');
+  zqry1.SQL.Add('select * from tb_ortu');
   zqry1.Open;
   Showmessage('DATA BERHASIL DI SIMPAN');
 
@@ -71,7 +69,7 @@ end;
 procedure TForm6.Button2Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_ortu set ortu_id="'+e1.Text+'", nik="'+e2.Text+'", nama="'+e3.Text+'", pendidikan="'+c1.Text+'", pekerjaan="'+e4.Text+'", telp="'+e5.Text+'", alamat="'+e6.Text+'", agama="'+e7.Text+'", jenis_kelamin="'+c2.Text+'", status="'+c3.Text+'" where ortu_id="'+id+'"');
+  zqry1.SQL.Add('update tb_ortu set nik="'+e1.Text+'", nama="'+e2.Text+'", pendidikan="'+e3.Text+'", pendidikan="'+c1.Text+'", pekerjaan="'+e4.Text+'", telp="'+e5.Text+'", alamat="'+e6.Text+'", agama="'+e7.Text+'", jenis_kelamin="'+c2.Text+'", status="'+c3.Text+'" where ortu_id="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -92,7 +90,7 @@ begin
   ShowMessage('DATA BERHASIL DIHAPUS!');
 end;
 
-procedure TForm6.Button4Click(Sender: TObject);
+procedure TForm6.clClick(Sender: TObject);
 begin
   e1.Clear;
   e2.Clear;
