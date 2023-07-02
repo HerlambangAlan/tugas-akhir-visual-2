@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 237
-  Top = 169
+  Left = 190
+  Top = 223
   Width = 928
   Height = 480
   Caption = 'Form4'
@@ -72,9 +72,9 @@ object Form4: TForm4
   object Label9: TLabel
     Left = 64
     Top = 208
-    Width = 24
+    Width = 30
     Height = 13
-    Caption = 'Lulus'
+    Caption = 'status'
   end
   object DBGrid1: TDBGrid
     Left = 64
@@ -147,10 +147,7 @@ object Form4: TForm4
     TabOrder = 8
     Items.Strings = (
       '1'
-      '2'
-      '3'
-      '4'
-      '5')
+      '2')
   end
   object Button1: TButton
     Left = 88

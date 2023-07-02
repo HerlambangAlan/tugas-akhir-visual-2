@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 273
-  Top = 221
+  Left = 296
+  Top = 171
   Width = 928
   Height = 480
   Caption = 'Form6'
@@ -79,14 +79,14 @@ object Form6: TForm6
   object Label10: TLabel
     Left = 368
     Top = 136
-    Width = 37
+    Width = 31
     Height = 13
-    Caption = 'Label10'
+    Caption = 'Status'
   end
   object DBGrid1: TDBGrid
     Left = 32
     Top = 296
-    Width = 801
+    Width = 769
     Height = 120
     DataSource = DataSource1
     TabOrder = 0
@@ -97,40 +97,44 @@ object Form6: TForm6
     TitleFont.Style = []
   end
   object Button1: TButton
-    Left = 48
-    Top = 240
+    Left = 88
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Simpan'
     TabOrder = 1
+    OnClick = Button1Click
   end
   object Button2: TButton
-    Left = 176
-    Top = 240
+    Left = 168
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Edit'
     TabOrder = 2
+    OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 312
-    Top = 248
+    Left = 248
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Hapus'
     TabOrder = 3
+    OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 440
-    Top = 248
+    Left = 328
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Clear from'
     TabOrder = 4
+    OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 560
-    Top = 256
+    Left = 408
+    Top = 200
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -185,20 +189,13 @@ object Form6: TForm6
     Height = 21
     TabOrder = 12
   end
-  object e8: TEdit
-    Left = 448
-    Top = 136
-    Width = 121
-    Height = 21
-    TabOrder = 13
-  end
   object c1: TComboBox
     Left = 112
     Top = 104
     Width = 145
     Height = 21
     ItemHeight = 13
-    TabOrder = 14
+    TabOrder = 13
     Items.Strings = (
       'SD'
       'SMP'
@@ -211,7 +208,18 @@ object Form6: TForm6
     Width = 145
     Height = 21
     ItemHeight = 13
+    TabOrder = 14
+  end
+  object c3: TComboBox
+    Left = 456
+    Top = 136
+    Width = 145
+    Height = 21
+    ItemHeight = 13
     TabOrder = 15
+    Items.Strings = (
+      'Kandung'
+      'Wali')
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

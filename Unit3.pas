@@ -19,6 +19,7 @@ type
     procedure InputDataKelas1Click(Sender: TObject);
     procedure i1Click(Sender: TObject);
     procedure InputDataPoij1Click(Sender: TObject);
+    procedure InputDataWaliKelas1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,6 +61,13 @@ begin
 if Form5=nil then
   Form5:=TForm5.Create(Application);
   Form5.Show;
+end;
+
+procedure TForm3.InputDataWaliKelas1Click(Sender: TObject);
+begin
+if Form6=nil then
+  Form6:=TForm6.Create(Application);
+  Form6.Show;
 end;
 
 end.

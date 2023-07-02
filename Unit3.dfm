@@ -37,6 +37,7 @@ object Form3: TForm3
       end
       object InputDataWaliKelas1: TMenuItem
         Caption = 'Input Data Ortu'
+        OnClick = InputDataWaliKelas1Click
       end
     end
   end

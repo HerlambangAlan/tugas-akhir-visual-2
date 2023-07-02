@@ -35,9 +35,13 @@ type
     e5: TEdit;
     e6: TEdit;
     e7: TEdit;
-    e8: TEdit;
     c1: TComboBox;
     c2: TComboBox;
+    c3: TComboBox;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,5 +54,56 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into tb_ortu values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+c1.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+e6.Text+'", "'+e7.Text+'", "'+e6.Text+'", "'+e7.Text+'", "'+c2.Text+'", "'+c3.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_siswa');
+  zqry1.Open;
+  Showmessage('DATA BERHASIL DI SIMPAN');
+
+end;
+
+procedure TForm6.Button2Click(Sender: TObject);
+begin
+zqry1.SQL.Clear;
+  zqry1.SQL.Add('update tb_ortu set ortu_id="'+e1.Text+'", nik="'+e2.Text+'", nama="'+e3.Text+'", pendidikan="'+c1.Text+'", pekerjaan="'+e4.Text+'", telp="'+e5.Text+'", alamat="'+e6.Text+'", agama="'+e7.Text+'", jenis_kelamin="'+c2.Text+'", status="'+c3.Text+'" where ortu_id="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_siswa');
+  zqry1.Open;
+  Showmessage('DATA BERHASIL DI EDIT');
+end;
+
+procedure TForm6.Button3Click(Sender: TObject);
+begin
+
+ zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from tb_siswa where ortu_id="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_ortu');
+  zqry1.Open;
+  ShowMessage('DATA BERHASIL DIHAPUS!');
+end;
+
+procedure TForm6.Button4Click(Sender: TObject);
+begin
+  e1.Clear;
+  e2.Clear;
+  e3.Clear;
+  c1.Clear;
+  e4.Clear;
+  e5.Clear;
+  e6.Clear;
+  e7.Clear;
+  c2.Clear;
+  c3.Clear;
+end;
 
 end.

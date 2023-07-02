@@ -1,6 +1,6 @@
 object Form5: TForm5
   Left = 202
-  Top = 111
+  Top = 155
   Width = 928
   Height = 480
   Caption = 'Form5'
