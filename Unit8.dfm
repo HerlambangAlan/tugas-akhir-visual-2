@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 317
-  Top = 206
+  Left = 548
+  Top = 208
   Width = 928
   Height = 480
   Caption = 'Data Hubungan'
@@ -89,6 +89,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'Simpan'
     TabOrder = 5
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 224
@@ -97,6 +98,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'Edit'
     TabOrder = 6
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 312
@@ -105,6 +107,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'Hapus'
     TabOrder = 7
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 400
@@ -113,6 +116,7 @@ object Form8: TForm8
     Height = 25
     Caption = 'Clear From'
     TabOrder = 8
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 488

@@ -9,7 +9,7 @@ uses
 
 type
   TForm4 = class(TForm)
-    ZConnection1: TZConnection;
+    con1: TZConnection;
     zqry1: TZQuery;
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
@@ -66,7 +66,7 @@ end;
 procedure TForm4.Button2Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_riwayat_poin set siswa_id ="'+e1.Text+'", poin_id="'+e2.Text+'", wali_id="'+e3.Text+'", ortu_id="'+e4.Text+'", kelas_id="'+e5.Text+'", status="'+e6.Text+'" where id="'+id+'"');
+  zqry1.SQL.Add('update tb_riwayat_poin set siswa_id="'+e1.Text+'", poin_id="'+e2.Text+'", wali_id="'+e3.Text+'", ortu_id="'+e4.Text+'", kelas_id="'+e5.Text+'", status="'+e6.Text+'" where id="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;

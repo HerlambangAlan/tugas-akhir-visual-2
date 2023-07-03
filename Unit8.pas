@@ -26,6 +26,10 @@ type
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,5 +42,48 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm8.Button1Click(Sender: TObject);
+begin
+zqry1.SQL.Clear;
+  zqry1.SQL.Add('insert into tb_hubungan values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'")');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_hubungan');
+  zqry1.Open;
+  Showmessage('DATA BERHASIL DI SIMPAN');
+end;
+
+procedure TForm8.Button2Click(Sender: TObject);
+begin
+ zqry1.SQL.Clear;
+  zqry1.SQL.Add('update tb_hubungan set siswa_id="'+e1.Text+'", ortu_id="'+e2.Text+'", status_hub="'+e3.Text+'", keterangan="'+e4.Text+'" where id="'+id+'"');
+  zqry1.ExecSQL;
+
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_siswa');
+  zqry1.Open;
+  Showmessage('DATA BERHASIL DI EDIT');
+end;
+
+procedure TForm8.Button3Click(Sender: TObject);
+begin
+ zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from tb_hubungsn where id="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tb_hubungan');
+  zqry1.Open;
+  ShowMessage('DATA BERHASIL DIHAPUS!');
+end;
+
+procedure TForm8.Button4Click(Sender: TObject);
+begin
+  e1.Clear;
+  e2.Clear;
+  e3.Clear;
+  e4.Clear;
+end;
 
 end.

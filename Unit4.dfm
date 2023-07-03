@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 345
-  Top = 145
+  Left = 473
+  Top = 159
   Width = 928
   Height = 480
   Caption = 'Data Riwayat Poin'
@@ -188,7 +188,7 @@ object Form4: TForm4
     Time = 45108.849277430560000000
     TabOrder = 13
   end
-  object ZConnection1: TZConnection
+  object con1: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
@@ -203,7 +203,7 @@ object Form4: TForm4
     Top = 24
   end
   object zqry1: TZQuery
-    Connection = ZConnection1
+    Connection = con1
     Active = True
     SQL.Strings = (
       'select  *  from tb_riwayat_poin')
