@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 473
-  Top = 159
+  Left = 263
+  Top = 231
   Width = 928
   Height = 480
   Caption = 'Data Riwayat Poin'

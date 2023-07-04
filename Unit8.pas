@@ -70,7 +70,7 @@ end;
 procedure TForm8.Button3Click(Sender: TObject);
 begin
  zqry1.SQL.Clear;
-  zqry1.SQL.Add('delete from tb_hubungsn where id="'+id+'"');
+  zqry1.SQL.Add('delete from tb_hubungan where id="'+id+'"');
   zqry1.ExecSQL;
   zqry1.SQL.Clear;
   zqry1.SQL.Add('select * from tb_hubungan');

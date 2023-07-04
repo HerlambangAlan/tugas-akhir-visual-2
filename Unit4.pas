@@ -54,7 +54,7 @@ implementation
 procedure TForm4.Button1Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('insert into tb_riwayat_poin values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'", "'+c1.Text+'", "'+e6.Text+'")');
+  zqry1.SQL.Add('insert into tb_riwayat_poin values(null,"'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+FormatDateTime('yyyy-mm-dd',dtp1.Date)+'", "'+c1.Text+'", "'+e6.Text+'")');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -65,8 +65,8 @@ end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_riwayat_poin set siswa_id="'+e1.Text+'", poin_id="'+e2.Text+'", wali_id="'+e3.Text+'", ortu_id="'+e4.Text+'", kelas_id="'+e5.Text+'", status="'+e6.Text+'" where id="'+id+'"');
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('Update tb_riwayat_poin set siswa_id="'+e1.Text+'", poin_id="'+e2.Text+'", wali_id="'+e3.Text+'", ortu_id="'+e4.Text+'", kelas_id="'+e5.Text+'", semester="'+c1.Text+'", status="'+e6.Text+'" where id="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;

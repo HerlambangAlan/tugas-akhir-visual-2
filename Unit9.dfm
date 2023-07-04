@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 391
-  Top = 232
+  Left = 462
+  Top = 193
   Width = 928
   Height = 480
   Caption = 'Data user'
@@ -89,6 +89,7 @@ object Form9: TForm9
     Height = 25
     Caption = 'Simpan'
     TabOrder = 5
+    OnClick = Button1Click
   end
   object Button2: TButton
     Left = 224
@@ -97,6 +98,7 @@ object Form9: TForm9
     Height = 25
     Caption = 'Edit'
     TabOrder = 6
+    OnClick = Button2Click
   end
   object Button3: TButton
     Left = 320
@@ -105,6 +107,7 @@ object Form9: TForm9
     Height = 25
     Caption = 'Hapus'
     TabOrder = 7
+    OnClick = Button3Click
   end
   object Button4: TButton
     Left = 416
@@ -113,6 +116,7 @@ object Form9: TForm9
     Height = 25
     Caption = 'Clear From'
     TabOrder = 8
+    OnClick = Button4Click
   end
   object Button5: TButton
     Left = 512
@@ -147,7 +151,7 @@ object Form9: TForm9
   end
   object DataSource1: TDataSource
     DataSet = zqry1
-    Left = 864
-    Top = 56
+    Left = 848
+    Top = 48
   end
 end

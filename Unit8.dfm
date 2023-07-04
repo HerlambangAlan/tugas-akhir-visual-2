@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 548
-  Top = 208
+  Left = 393
+  Top = 310
   Width = 928
   Height = 480
   Caption = 'Data Hubungan'
