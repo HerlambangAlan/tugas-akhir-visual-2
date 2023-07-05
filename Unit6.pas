@@ -69,7 +69,7 @@ end;
 procedure TForm6.Button2Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_ortu set nik="'+e1.Text+'", nama="'+e2.Text+'", pendidikan="'+e3.Text+'", pendidikan="'+c1.Text+'", pekerjaan="'+e4.Text+'", telp="'+e5.Text+'", alamat="'+e6.Text+'", agama="'+e7.Text+'", jenis_kelamin="'+c2.Text+'", status="'+c3.Text+'" where ortu_id="'+id+'"');
+  zqry1.SQL.Add('update tb_ortu set nik="'+e1.Text+'", nama="'+e2.Text+'", pendidikan="'+c1.Text+'", pendidikan="'+c1.Text+'", pekerjaan="'+e4.Text+'", telp="'+e5.Text+'", alamat="'+e6.Text+'", agama="'+e7.Text+'", jenis_kelamin="'+c2.Text+'", status="'+c3.Text+'" where ortu_id="'+id+'"');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;

@@ -1,6 +1,6 @@
 object Form3: TForm3
   Left = 455
-  Top = 235
+  Top = 191
   Width = 471
   Height = 367
   Caption = 'Menu'
@@ -41,15 +41,12 @@ object Form3: TForm3
       end
       object InputDataWaliKelas2: TMenuItem
         Caption = 'Input Data Wali Kelas'
-        OnClick = InputDataWaliKelas2Click
       end
       object InputDataHubungan1: TMenuItem
         Caption = 'Input Data Hubungan'
-        OnClick = InputDataHubungan1Click
       end
       object InputDataUser1: TMenuItem
         Caption = 'Input Data User'
-        OnClick = InputDataUser1Click
       end
     end
   end

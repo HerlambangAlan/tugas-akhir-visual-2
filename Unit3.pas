@@ -23,9 +23,6 @@ type
     procedure i1Click(Sender: TObject);
     procedure InputDataPoij1Click(Sender: TObject);
     procedure InputDataWaliKelas1Click(Sender: TObject);
-    procedure InputDataWaliKelas2Click(Sender: TObject);
-    procedure InputDataHubungan1Click(Sender: TObject);
-    procedure InputDataUser1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,7 +34,7 @@ var
 
 implementation
 
-uses Unit1, Unit2, Unit4;
+uses Unit1, Unit2, Unit4, Unit5, Unit6, Unit7, Unit8, Unit9;
 
 {$R *.dfm}
 
@@ -74,27 +71,6 @@ begin
 if Form6=nil then
   Form6:=TForm6.Create(Application);
   Form6.Show;
-end;
-
-procedure TForm3.InputDataWaliKelas2Click(Sender: TObject);
-begin
-if Form7=nil then
-  Form7=TForm7.Create(Application);
-  Form7.Show;
-end;
-
-procedure TForm3.InputDataHubungan1Click(Sender: TObject);
-begin
-if Form8=nil then
-  Form8=TForm8.Create(Application);
-  Form8.Show;
-end;
-
-procedure TForm3.InputDataUser1Click(Sender: TObject);
-begin
-if Form9=nil then
-  Form9=TForm9.Create(Application);
-  Form9.Show;
 end;
 
 end.

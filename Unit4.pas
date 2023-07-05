@@ -11,8 +11,8 @@ type
   TForm4 = class(TForm)
     con1: TZConnection;
     zqry1: TZQuery;
-    DataSource1: TDataSource;
-    DBGrid1: TDBGrid;
+    d1: TDataSource;
+    dg1: TDBGrid;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -38,6 +38,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure dg1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -65,25 +66,21 @@ end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('Update tb_riwayat_poin set siswa_id="'+e1.Text+'", poin_id="'+e2.Text+'", wali_id="'+e3.Text+'", ortu_id="'+e4.Text+'", kelas_id="'+e5.Text+'", semester="'+c1.Text+'", status="'+e6.Text+'" where id="'+id+'"');
-  zqry1.ExecSQL;
-
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_riwayat_poin');
-  zqry1.Open;
-  Showmessage('DATA BERHASIL DI EDIT');
+  zqry1.Edit;
+  zqry1.FieldByName('siswa_id').Text := e1.Text;
+  zqry1.FieldByName('poin_id').Text := e2.Text;
+  zqry1.FieldByName('wali_id').Text := e3.Text;
+  zqry1.FieldByName('ortu_id').Text := e4.Text;
+  zqry1.FieldByName('kelas_id').Text := e5.Text;
+  zqry1.FieldByName('semester').Text := c1.Text;
+  zqry1.FieldByName('status').Text := e6.Text;
+  zqry1.Post;
 end;
 
 procedure TForm4.Button3Click(Sender: TObject);
 begin
-zqry1.SQL.Clear;
-  zqry1.SQL.Add('delete from tb_riwayat_poin where id ="'+id+'"');
-  zqry1.ExecSQL;
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_riwayat_poin');
-  zqry1.Open;
-  ShowMessage('DATA BERHASIL DIHAPUS!');
+if MessageDlg('Apakah Data Akan Di Hapus ???', mtConfirmation,[mbYes,mbNo],0)=mryes then
+zqry1.Delete;
 end;
 
 procedure TForm4.Button4Click(Sender: TObject);
@@ -95,6 +92,18 @@ begin
   e5.Clear;
   c1.Clear;
   e6.Clear;
+end;
+
+procedure TForm4.dg1CellClick(Column: TColumn);
+begin
+  e1.Text:=zqry1.Fields[1].AsString;
+  e2.Text:=zqry1.Fields[2].AsString;
+  e3.Text:=zqry1.Fields[3].AsString;
+  e4.Text:=zqry1.Fields[4].AsString;
+  e5.Text:=zqry1.Fields[5].AsString;
+  dtp1.date:=zqry1.Fields[6].AsDateTime;
+  c1.Text:=zqry1.Fields[7].AsString;
+  e6.Text:=zqry1.Fields[8].AsString;
 end;
 
 end.

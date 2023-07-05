@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 193
-  Top = 172
+  Left = 244
+  Top = 206
   Width = 928
   Height = 480
   Caption = 'Data Poin'
@@ -41,18 +41,19 @@ object Form5: TForm5
     Height = 13
     Caption = 'Status'
   end
-  object DBGrid1: TDBGrid
+  object dg1: TDBGrid
     Left = 80
     Top = 312
     Width = 633
     Height = 120
-    DataSource = DataSource1
+    DataSource = d1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dg1CellClick
   end
   object e1: TEdit
     Left = 200
@@ -153,7 +154,7 @@ object Form5: TForm5
     Left = 688
     Top = 32
   end
-  object DataSource1: TDataSource
+  object d1: TDataSource
     DataSet = zqry1
     Left = 752
     Top = 32
