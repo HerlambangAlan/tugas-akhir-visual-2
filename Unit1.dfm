@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 253
-  Top = 25
+  Left = 353
+  Top = 220
   Width = 886
   Height = 631
   Caption = 'Input Data Siswa'
@@ -15,105 +15,105 @@ object Form1: TForm1
   TextHeight = 13
   object l1: TLabel
     Left = 24
-    Top = 96
+    Top = 56
     Width = 24
     Height = 13
     Caption = 'NISN'
   end
   object l2: TLabel
     Left = 24
-    Top = 128
+    Top = 88
     Width = 57
     Height = 13
     Caption = 'Nama Siswa'
   end
   object l3: TLabel
     Left = 24
-    Top = 160
+    Top = 120
     Width = 17
     Height = 13
     Caption = 'NIK'
   end
   object l4: TLabel
-    Left = 24
-    Top = 192
+    Left = 16
+    Top = 152
     Width = 62
     Height = 13
     Caption = 'Tempat Lahir'
   end
   object l5: TLabel
     Left = 24
-    Top = 256
+    Top = 224
     Width = 63
     Height = 13
     Caption = 'Jenis Kelamin'
   end
   object l6: TLabel
-    Left = 360
-    Top = 64
+    Left = 352
+    Top = 24
     Width = 63
     Height = 13
     Caption = 'Tingkat Kelas'
   end
   object l7: TLabel
     Left = 360
-    Top = 96
+    Top = 56
     Width = 38
     Height = 13
     Caption = 'Jurusan'
   end
   object l8: TLabel
-    Left = 360
-    Top = 128
+    Left = 352
+    Top = 88
     Width = 48
     Height = 13
     Caption = 'Wali Kelas'
   end
   object l9: TLabel
     Left = 360
-    Top = 160
+    Top = 120
     Width = 33
     Height = 13
     Caption = 'Alamat'
   end
   object l10: TLabel
     Left = 360
-    Top = 192
+    Top = 152
     Width = 38
     Height = 13
     Caption = 'Telepon'
   end
   object l11: TLabel
     Left = 360
-    Top = 224
+    Top = 176
     Width = 13
     Height = 13
     Caption = 'Hp'
   end
   object l12: TLabel
-    Left = 360
-    Top = 256
+    Left = 352
+    Top = 208
     Width = 31
     Height = 13
     Caption = 'Status'
   end
   object l13: TLabel
     Left = 24
-    Top = 64
+    Top = 24
     Width = 17
     Height = 13
     Caption = 'NIS'
   end
   object l14: TLabel
-    Left = 24
-    Top = 224
+    Left = 16
+    Top = 184
     Width = 64
     Height = 13
     Caption = 'Tanggal Lahir'
   end
   object b3: TButton
-    Left = 80
-    Top = 312
+    Left = 104
+    Top = 264
     Width = 75
     Height = 25
     Caption = 'Simpan'
@@ -121,8 +121,8 @@ object Form1: TForm1
     OnClick = b3Click
   end
   object b4: TButton
-    Left = 176
-    Top = 312
+    Left = 184
+    Top = 264
     Width = 75
     Height = 25
     Caption = 'Edit'
@@ -130,8 +130,8 @@ object Form1: TForm1
     OnClick = b4Click
   end
   object b5: TButton
-    Left = 280
-    Top = 312
+    Left = 264
+    Top = 264
     Width = 75
     Height = 25
     Caption = 'Hapus'
@@ -139,8 +139,8 @@ object Form1: TForm1
     OnClick = b5Click
   end
   object b6: TButton
-    Left = 376
-    Top = 312
+    Left = 344
+    Top = 264
     Width = 75
     Height = 25
     Caption = 'Clear Form'
@@ -148,8 +148,8 @@ object Form1: TForm1
     OnClick = b6Click
   end
   object b2: TButton
-    Left = 472
-    Top = 312
+    Left = 432
+    Top = 264
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -157,63 +157,63 @@ object Form1: TForm1
   end
   object e1: TEdit
     Left = 104
-    Top = 64
+    Top = 16
     Width = 233
     Height = 21
     TabOrder = 5
   end
   object e2: TEdit
     Left = 104
-    Top = 96
+    Top = 48
     Width = 233
     Height = 21
     TabOrder = 6
   end
   object e3: TEdit
     Left = 104
-    Top = 128
+    Top = 80
     Width = 233
     Height = 21
     TabOrder = 7
   end
   object e4: TEdit
     Left = 104
-    Top = 160
+    Top = 112
     Width = 233
     Height = 21
     TabOrder = 8
   end
   object e5: TEdit
     Left = 104
-    Top = 192
+    Top = 144
     Width = 233
     Height = 21
     TabOrder = 9
   end
   object e6: TEdit
-    Left = 440
-    Top = 128
+    Left = 432
+    Top = 80
     Width = 233
     Height = 21
     TabOrder = 10
   end
   object e8: TEdit
-    Left = 440
-    Top = 192
+    Left = 432
+    Top = 144
     Width = 233
     Height = 21
     TabOrder = 11
   end
   object e9: TEdit
-    Left = 440
-    Top = 224
+    Left = 432
+    Top = 176
     Width = 233
     Height = 21
     TabOrder = 12
   end
   object dg1: TDBGrid
-    Left = 8
-    Top = 408
+    Left = -8
+    Top = 304
     Width = 1201
     Height = 145
     DataSource = d1
@@ -340,7 +340,7 @@ object Form1: TForm1
   end
   object dtp1: TDateTimePicker
     Left = 104
-    Top = 224
+    Top = 184
     Width = 233
     Height = 21
     Date = 45094.730822800930000000
@@ -349,7 +349,7 @@ object Form1: TForm1
   end
   object c1: TComboBox
     Left = 104
-    Top = 256
+    Top = 216
     Width = 233
     Height = 21
     ItemHeight = 13
@@ -359,8 +359,8 @@ object Form1: TForm1
       'Perempuan')
   end
   object c2: TComboBox
-    Left = 440
-    Top = 64
+    Left = 432
+    Top = 16
     Width = 233
     Height = 21
     ItemHeight = 13
@@ -371,8 +371,8 @@ object Form1: TForm1
       'XII')
   end
   object c3: TComboBox
-    Left = 440
-    Top = 96
+    Left = 432
+    Top = 48
     Width = 233
     Height = 21
     ItemHeight = 13
@@ -383,8 +383,8 @@ object Form1: TForm1
       'IPS')
   end
   object c4: TComboBox
-    Left = 440
-    Top = 256
+    Left = 432
+    Top = 208
     Width = 233
     Height = 21
     ItemHeight = 13
@@ -394,8 +394,8 @@ object Form1: TForm1
       'Tidak Aktif')
   end
   object e7: TEdit
-    Left = 440
-    Top = 160
+    Left = 432
+    Top = 112
     Width = 233
     Height = 21
     TabOrder = 19

@@ -10,9 +10,9 @@ uses
 type
   TForm6 = class(TForm)
     con1: TZConnection;
-    DataSource1: TDataSource;
+    d1: TDataSource;
     zqry1: TZQuery;
-    DBGrid1: TDBGrid;
+    dg1: TDBGrid;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
@@ -40,6 +40,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure clClick(Sender: TObject);
+    procedure dg1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -56,7 +57,7 @@ implementation
 procedure TForm6.Button1Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
-  zqry1.SQL.Add('insert into tb_ortu values(null, "'+e1.Text+'", "'+e2.Text+'", "'+e3.Text+'", "'+c1.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+e6.Text+'", "'+c2.Text+'", "'+c3.Text+'")');
+  zqry1.SQL.Add('insert into tb_ortu values(null, "'+e1.Text+'", "'+e2.Text+'", "'+c1.Text+'", "'+e3.Text+'", "'+e4.Text+'", "'+e5.Text+'", "'+e6.Text+'", "'+c2.Text+'", "'+c3.Text+'")');
   zqry1.ExecSQL;
 
   zqry1.SQL.Clear;
@@ -68,40 +69,49 @@ end;
 
 procedure TForm6.Button2Click(Sender: TObject);
 begin
-zqry1.SQL.Clear;
-  zqry1.SQL.Add('update tb_ortu set nik="'+e1.Text+'", nama="'+e2.Text+'", pendidikan="'+c1.Text+'", pendidikan="'+c1.Text+'", pekerjaan="'+e4.Text+'", telp="'+e5.Text+'", alamat="'+e6.Text+'", agama="'+e7.Text+'", jenis_kelamin="'+c2.Text+'", status="'+c3.Text+'" where ortu_id="'+id+'"');
-  zqry1.ExecSQL;
-
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_siswa');
-  zqry1.Open;
-  Showmessage('DATA BERHASIL DI EDIT');
+  zqry1.Edit;
+  zqry1.FieldByName('nik').Text := e1.Text;
+  zqry1.FieldByName('nama').Text := e2.Text;
+  zqry1.FieldByName('pendidikan').Text := c1.Text;
+  zqry1.FieldByName('pekerjaan').Text := e3.Text;
+  zqry1.FieldByName('telp').Text := e4.Text;
+  zqry1.FieldByName('alamat').Text := e5.Text;
+  zqry1.FieldByName('agama').Text := e6.Text;
+  zqry1.FieldByName('pendidikan').Text := c2.Text;
+  zqry1.FieldByName('pendidikan').Text := c3.Text;
+  zqry1.Post;
 end;
 
 procedure TForm6.Button3Click(Sender: TObject);
 begin
-
- zqry1.SQL.Clear;
-  zqry1.SQL.Add('delete from tb_siswa where ortu_id="'+id+'"');
-  zqry1.ExecSQL;
-  zqry1.SQL.Clear;
-  zqry1.SQL.Add('select * from tb_ortu');
-  zqry1.Open;
-  ShowMessage('DATA BERHASIL DIHAPUS!');
+if MessageDlg('Apakah Data Akan Di Hapus ???', mtConfirmation,[mbYes,mbNo],0)=mryes then
+zqry1.Delete;
 end;
 
 procedure TForm6.clClick(Sender: TObject);
 begin
   e1.Clear;
   e2.Clear;
-  e3.Clear;
   c1.Clear;
+  e3.Clear;
   e4.Clear;
   e5.Clear;
   e6.Clear;
-  e7.Clear;
   c2.Clear;
   c3.Clear;
+end;
+
+procedure TForm6.dg1CellClick(Column: TColumn);
+begin
+  e1.Text:=zqry1.Fields[1].AsString;
+  e2.Text:=zqry1.Fields[2].AsString;
+  c1.Text:=zqry1.Fields[3].AsString;
+  e3.Text:=zqry1.Fields[4].AsString;
+  e4.Text:=zqry1.Fields[5].AsString;
+  e5.Text:=zqry1.Fields[6].AsString;
+  e6.Text:=zqry1.Fields[7].AsString;
+  c2.Text:=zqry1.Fields[8].AsString;
+  c3.Text:=zqry1.Fields[8].AsString;
 end;
 
 end.

@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 462
-  Top = 193
+  Left = 229
+  Top = 181
   Width = 928
   Height = 480
   Caption = 'Data user'
@@ -41,18 +41,19 @@ object Form9: TForm9
     Height = 13
     Caption = 'Status'
   end
-  object DBGrid1: TDBGrid
+  object dg1: TDBGrid
     Left = 64
     Top = 296
     Width = 705
     Height = 120
-    DataSource = DataSource1
+    DataSource = d1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dg1CellClick
   end
   object e1: TEdit
     Left = 216
@@ -149,9 +150,9 @@ object Form9: TForm9
     Left = 808
     Top = 40
   end
-  object DataSource1: TDataSource
+  object d1: TDataSource
     DataSet = zqry1
     Left = 848
-    Top = 48
+    Top = 40
   end
 end

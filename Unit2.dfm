@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 279
-  Top = 78
+  Left = 272
+  Top = 138
   Width = 928
   Height = 480
   Caption = 'Input Data Kelas'

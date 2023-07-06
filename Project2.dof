@@ -119,3 +119,12 @@ Private=0
 DLL=0
 Locale=14345
 CodePage=1252
+[Excluded Packages]
+C:\Windows\SYSTEM32\fqb70.bpl=FastQueryBuilder 1.03
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfrxADO7.bpl=FastReport 4.0 ADO Components
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfrxBDE7.bpl=FastReport 4.0 BDE Components
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfrxe7.bpl=FastReport 4.0 Exports
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfs7.bpl=FastScript 1.9 Components
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfsADO7.bpl=FastScript 1.9 ADO Components
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfsBDE7.bpl=FastScript 1.9 BDE Components
+C:\Program Files (x86)\Borland\FastReport 4\LibD7\dclfsDB7.bpl=FastScript 1.9 DB Components

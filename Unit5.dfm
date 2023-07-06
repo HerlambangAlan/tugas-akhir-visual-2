@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 244
-  Top = 206
+  Left = 464
+  Top = 216
   Width = 928
   Height = 480
   Caption = 'Data Poin'

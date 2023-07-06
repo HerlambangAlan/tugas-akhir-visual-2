@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 393
-  Top = 310
+  Left = 485
+  Top = 100
   Width = 928
   Height = 480
   Caption = 'Data Hubungan'
@@ -41,18 +41,19 @@ object Form8: TForm8
     Height = 13
     Caption = 'Keterangan'
   end
-  object DBGrid1: TDBGrid
+  object dg1: TDBGrid
     Left = 112
     Top = 288
     Width = 473
     Height = 137
-    DataSource = DataSource1
+    DataSource = d1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dg1CellClick
   end
   object e1: TEdit
     Left = 224
@@ -137,7 +138,7 @@ object Form8: TForm8
     User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Users\ASUS\Documents\visual 2\Project-akhir\libmysql.dll'
-    Left = 760
+    Left = 696
     Top = 40
   end
   object zqry1: TZQuery
@@ -146,12 +147,12 @@ object Form8: TForm8
     SQL.Strings = (
       'select * from tb_hubungan')
     Params = <>
-    Left = 808
+    Left = 736
     Top = 40
   end
-  object DataSource1: TDataSource
+  object d1: TDataSource
     DataSet = zqry1
-    Left = 864
-    Top = 40
+    Left = 800
+    Top = 48
   end
 end

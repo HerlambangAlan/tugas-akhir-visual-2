@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 296
-  Top = 171
+  Left = 444
+  Top = 144
   Width = 928
   Height = 480
   Caption = 'Data Ortu'
@@ -76,18 +76,19 @@ object Form6: TForm6
     Height = 13
     Caption = 'Status'
   end
-  object DBGrid1: TDBGrid
+  object dg1: TDBGrid
     Left = 32
     Top = 296
     Width = 769
     Height = 120
-    DataSource = DataSource1
+    DataSource = d1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dg1CellClick
   end
   object Button1: TButton
     Left = 88
@@ -195,6 +196,9 @@ object Form6: TForm6
     Height = 21
     ItemHeight = 13
     TabOrder = 13
+    Items.Strings = (
+      'Laki - Laki'
+      'Perempuan')
   end
   object c3: TComboBox
     Left = 448
@@ -221,7 +225,7 @@ object Form6: TForm6
     Left = 704
     Top = 16
   end
-  object DataSource1: TDataSource
+  object d1: TDataSource
     DataSet = zqry1
     Left = 816
     Top = 32
