@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Grids, DBGrids, DB, ZAbstractRODataset,
-  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection;
+  ZAbstractDataset, ZDataset, ZAbstractConnection, ZConnection, frxClass,
+  frxDBSet;
 
 type
   TForm5 = class(TForm)
@@ -26,11 +27,14 @@ type
     Button4: TButton;
     Button5: TButton;
     c1: TComboBox;
+    frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure dg1CellClick(Column: TColumn);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -86,6 +90,11 @@ begin
   e2.Text:=zqry1.Fields[2].AsString;
   c1.Text:=zqry1.Fields[3].AsString;
   e3.Text:=zqry1.Fields[4].AsString;
+end;
+
+procedure TForm5.Button5Click(Sender: TObject);
+begin
+frxReport1.ShowReport();
 end;
 
 end.

@@ -33,8 +33,8 @@ object Form3: TForm3
     OnClick = Button2Click
   end
   object Button3: TButton
-    Left = 280
-    Top = 24
+    Left = 264
+    Top = 72
     Width = 75
     Height = 25
     Caption = 'Riwayat Poin'
@@ -42,7 +42,7 @@ object Form3: TForm3
     OnClick = Button3Click
   end
   object Button4: TButton
-    Left = 88
+    Left = 184
     Top = 72
     Width = 75
     Height = 25
@@ -51,8 +51,8 @@ object Form3: TForm3
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 184
-    Top = 72
+    Left = 272
+    Top = 24
     Width = 75
     Height = 25
     Caption = 'Data Ortu'
@@ -60,7 +60,7 @@ object Form3: TForm3
     OnClick = Button5Click
   end
   object Button6: TButton
-    Left = 280
+    Left = 88
     Top = 72
     Width = 75
     Height = 25
@@ -70,7 +70,7 @@ object Form3: TForm3
   end
   object Button7: TButton
     Left = 88
-    Top = 120
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'Hubungan'
@@ -79,7 +79,7 @@ object Form3: TForm3
   end
   object Button8: TButton
     Left = 184
-    Top = 120
+    Top = 112
     Width = 75
     Height = 25
     Caption = 'User'

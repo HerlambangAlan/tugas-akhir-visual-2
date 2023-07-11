@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids, ComCtrls;
+  ZAbstractConnection, ZConnection, StdCtrls, Grids, DBGrids, ComCtrls,
+  frxClass, frxDBSet;
 
 type
   TForm4 = class(TForm)
@@ -34,11 +35,14 @@ type
     Button4: TButton;
     Button5: TButton;
     dtp1: TDateTimePicker;
+    frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure dg1CellClick(Column: TColumn);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -104,6 +108,11 @@ begin
   dtp1.date:=zqry1.Fields[6].AsDateTime;
   c1.Text:=zqry1.Fields[7].AsString;
   e6.Text:=zqry1.Fields[8].AsString;
+end;
+
+procedure TForm4.Button5Click(Sender: TObject);
+begin
+frxReport1.ShowReport();
 end;
 
 end.

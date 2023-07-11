@@ -1,10 +1,10 @@
 object Form2: TForm2
-  Left = 272
-  Top = 138
+  Left = 290
+  Top = 175
   Width = 928
   Height = 480
   Caption = 'Input Data Kelas'
-  Color = clBtnFace
+  Color = clFuchsia
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -15,35 +15,35 @@ object Form2: TForm2
   TextHeight = 13
   object l1: TLabel
     Left = 16
-    Top = 48
+    Top = 24
     Width = 27
     Height = 13
     Caption = 'Nama'
   end
   object l2: TLabel
     Left = 16
-    Top = 80
+    Top = 56
     Width = 24
     Height = 13
     Caption = 'Jenis'
   end
   object l3: TLabel
     Left = 16
-    Top = 112
+    Top = 88
     Width = 38
     Height = 13
     Caption = 'Jurusan'
   end
   object e1: TEdit
     Left = 72
-    Top = 48
+    Top = 16
     Width = 265
     Height = 21
     TabOrder = 0
   end
   object b1: TButton
-    Left = 80
-    Top = 216
+    Left = 72
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Simpan'
@@ -51,10 +51,10 @@ object Form2: TForm2
     OnClick = b1Click
   end
   object dg1: TDBGrid
-    Left = 168
-    Top = 296
+    Left = 72
+    Top = 184
     Width = 353
-    Height = 120
+    Height = 153
     DataSource = d1
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -99,7 +99,7 @@ object Form2: TForm2
   end
   object b2: TButton
     Left = 160
-    Top = 216
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Edit'
@@ -107,8 +107,8 @@ object Form2: TForm2
     OnClick = b2Click
   end
   object b3: TButton
-    Left = 240
-    Top = 216
+    Left = 248
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Hapus'
@@ -116,8 +116,8 @@ object Form2: TForm2
     OnClick = b3Click
   end
   object b4: TButton
-    Left = 320
-    Top = 216
+    Left = 336
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Clear Form'
@@ -125,8 +125,8 @@ object Form2: TForm2
     OnClick = b4Click
   end
   object b5: TButton
-    Left = 408
-    Top = 216
+    Left = 424
+    Top = 120
     Width = 75
     Height = 25
     Caption = 'Print'
@@ -134,7 +134,7 @@ object Form2: TForm2
   end
   object c1: TComboBox
     Left = 72
-    Top = 80
+    Top = 48
     Width = 265
     Height = 21
     ItemHeight = 13
@@ -145,7 +145,7 @@ object Form2: TForm2
   end
   object c2: TComboBox
     Left = 72
-    Top = 112
+    Top = 80
     Width = 265
     Height = 21
     ItemHeight = 13
